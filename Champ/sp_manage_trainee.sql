@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[sp_manage_Customer]
+CREATE PROCEDURE [dbo].[sp_manage_trainee]
   @customer_name AS NVARCHAR(50) = null
 , @customer_age  AS INT = null
 , @manage_type   AS TINYINT  
@@ -28,7 +28,7 @@ END
 ELSE IF (@manage_type = 1)
 BEGIN
   DELETE FROM [dbo].[Customer]
-  WHERE [customer_name] = @customer_name
+  WHERE [customer_id] = IS NULL
 END
 
 
