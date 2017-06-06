@@ -27,7 +27,7 @@ END
 
 ELSE IF (@manage_type = 1)
 BEGIN
-  DELETE FROM [dbo].[Customer]
+  DELETE FROM [dbo].[Car]
   WHERE [customer_id] = IS NULL
 END
 
